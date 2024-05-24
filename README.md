@@ -97,6 +97,9 @@ https://github.com/SOWMIYA2003/malaria-cell-recognition
 ```
 from tensorflow import keras
 from tensorflow.keras import layers
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras import utils
+
 model = keras.Sequential([
     layers.Input(shape=image_shape),
     layers.Conv2D(filters=32, kernel_size=(3,3), activation='relu'),
