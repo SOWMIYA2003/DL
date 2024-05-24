@@ -135,6 +135,13 @@ results = model.fit(train_image_gen,epochs=20,
 https://github.com/SOWMIYA2003/rnn-stock-price-prediction
 
 ```
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+from keras import layers
+from keras.models import Sequential
+
 model = Sequential([
     layers.SimpleRNN(50, input_shape=(60, 1)),
     layers.Dense(1)
