@@ -61,8 +61,18 @@ Model.fit(x=X_train_scaled,y=y_train,
 ## Convolutional Deep Neural Network for Digit Classification
 
 https://github.com/SOWMIYA2003/mnist-classification
-
 ```
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+import matplotlib.pyplot as plt
+from tensorflow.keras import utils
+import pandas as pd
+from sklearn.metrics import classification_report,confusion_matrix
+```
+```
+from tensorflow.keras.datasets import mnist
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
 model = keras.Sequential([
     layers.Input(shape=(28,28,1)),
     layers.Conv2D(filters=32, kernel_size=(3,3), activation='relu'),
