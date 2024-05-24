@@ -156,6 +156,9 @@ model.fit(X_train1,y_train,epochs=100, batch_size=32)
 https://github.com/SOWMIYA2003/named-entity-recognition
 
 ```
+from tensorflow import keras
+from tensorflow.keras import layers
+
 max_len = 50
 num_words = len(words)
 input_word = layers.Input(shape=(max_len,))
@@ -188,6 +191,11 @@ history = model.fit(
 https://github.com/SOWMIYA2003/convolutional-denoising-autoencoder
 
 ```
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.datasets import mnist
+(x_train, _), (x_test, _) = mnist.load_data()
+
 input_img = keras.Input(shape=(28, 28, 1))
 # Write your encoder here
 x = layers.Conv2D(16, (3,3), activation = 'relu', padding='same') (input_img)
